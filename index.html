@@ -40,23 +40,32 @@
         <!-- Day and full date details, weather description, humdity and wind speed on right of page -->
         <!-- future build in forecast, to include: 5 days, each displaying day (3 letters), icon, low and highs
    if possible build in humdity and wind speed under each or a toggle for either -->
-        <div>
-          <h1>Melbourne</h1>
-          <!--to update with form search entry-->
-          <p>
-            Saturday 19:25, clear skies
-            <br />
-            Humidity: 70%, Wind: 11km/h
-            <!--api to update weather description, humidity and wind speed-->
-          </p>
+        <div class="weather-app-body">
+          <div>
+            <h1 class="city-name">Melbourne</h1>
+            <!--to update with form search entry-->
+            <p class="weather-details">
+              Saturday 19:25, clear skies
+              <br />
+              Humidity: <span class="variable-details">70%</span>, Wind:
+              <span class="variable-details">11km/h</span>
+              <!--api to update weather description, humidity and wind speed-->
+            </p>
+          </div>
+          <div>
+            <span class="weather-temp-container">
+              <div class="weather-icon">☁️</div>
+              <div class="weather-value">11</div>
+              <div class="weather-unit">°C</div>
+              <br />
+            </span>
+            <div class="feels-like">
+              <span>Feels like: 8<span class="feels-unit">°C</span></span>
+              <!--api to update icon, temp and feels like temp (if feels like temp possible and within my skills!)-->
+            </div>
+          </div>
+          <!-- <div>forecast to come in future</div> -->
         </div>
-        <div>
-          ☁️ 11℃
-          <br />
-          Feels like: 8℃
-          <!--api to update icon, temp and feels like temp (if feels like temp possible and within my skills!)-->
-        </div>
-        <!-- <div>forecast to come in future</div> -->
       </main>
       <footer>
         This project was coded by
