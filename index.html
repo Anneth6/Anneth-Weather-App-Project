@@ -6,14 +6,56 @@
     <title>Anneth's Weather</title>
   </head>
   <body>
-    <h1>Anneth's Weather</h1>
-    <h2>Welcome! Enter a city to find current temperatures</h2>
+    <header>
+      <!-- website/shecodes icon if needed
+       welcome message to page?
+       serach box and button
+       theme toggle (dark/light)-->
+      <form>
+        <input type="search" placeholder="Enter a city" required />
+        <!-- JS notes: trim city name, min character limit -->
+        <input type="submit" value="Search" />
+      </form>
+      <hr />
+    </header>
+    <main>
+      <!-- city name, icon, temp and feels like on left of page
+ if possible toggle for Fahrenheit/Celcius-->
+      <!-- Day and full date details, weather description, humdity and wind speed on right of page -->
+      <!-- future build in forecast, to include: 5 days, each displaying day (3 letters), icon, low and highs
+   if possible build in humdity and wind speed under each or a toggle for either -->
+      <div>
+        <h1>Melbourne</h1>
+        <!--to update with form search entry-->
+        <p>
+          Saturday 19:25, clear skies
+          <br />
+          Humidity: 70%, Wind: 11km/h
+          <!--api to update weather description, humidity and wind speed-->
+        </p>
+      </div>
+      <div>
+        ☁️ 11℃
+        <br />
+        Feels like: 8℃
+        <!--api to update icon, temp and feels like temp (if feels like temp possible and within my skills!)-->
+      </div>
+      <!-- <div>forecast to come in future</div> -->
+    </main>
+    <hr />
+    <footer>
+      This project was coded by
+      <a href="https://github.com/Anneth6" target="_blank">Ann Russell</a>, is
+      open-sourced on
+      <a
+        href="https://github.com/Anneth6/Anneth-Weather-App-Project"
+        target="_blank"
+        >GitHub</a
+      >
+      and hosted on
+      <a href="https://main--anneth-weather.netlify.app/" target="_blank"
+        >Netlify</a
+      >.
+    </footer>
   </body>
-  <footer>
-    Coded by <a href="https://github.com/Anneth6">Ann Russell</a>, is
-    open-sourced on
-    <a href="https://github.com/Anneth6/Anneth-Weather-App-Project">GitHub</a>
-    and hosted on
-    <a href="https://main--anneth-weather.netlify.app/">Netlify</a>.
-  </footer>
 </html>
