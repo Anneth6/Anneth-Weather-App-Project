@@ -88,6 +88,7 @@ button:hover {
 }
 .dark .search-form-input {
   background-color: rgb(255, 224, 178, 0.5);
+  font-weight: 600;
 }
 .search-form-submit {
   background-color: rgba(33, 150, 243, 0.8);
