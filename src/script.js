@@ -1,3 +1,9 @@
+//allow usr to toggle between themes
+function changeTheme() {
+  let body = document.querySelector("body");
+  body.classList.toggle("dark");
+}
+
 // sources weather details from axios api, via search Input
 function refreshWeather(response) {
   let citySearch = document.querySelector("#city");
@@ -13,6 +19,8 @@ function refreshWeather(response) {
   let humidity = document.querySelector("#current-humidity");
   //   console.log(response.data.wind.speed);
   let wind = document.querySelector("#current-wind");
+  let windSpeed = response.data.wind.speed;
+  windSpeed = Math.round(windSpeed);
 
   //date&time element
   let time = document.querySelector("#time");
@@ -31,7 +39,7 @@ function refreshWeather(response) {
   description.innerHTML = response.data.condition.description;
   feels.innerHTML = Math.round(tempFeels);
   humidity.innerHTML = `${response.data.temperature.humidity}%`;
-  wind.innerHTML = `${response.data.wind.speed}km/h`;
+  wind.innerHTML = `${windSpeed}km/h`;
 }
 
 //date, day time function and format
@@ -75,6 +83,9 @@ function searchSubmit(event) {
   //   citySearch.innerHTML = searchInput.value;
   searchCity(searchInput.value);
 }
+
+let themeButton = document.querySelector(".themeButton");
+themeButton.addEventListener("click", changeTheme);
 
 let searchFormCity = document.querySelector("#search-form");
 searchFormCity.addEventListener("submit", searchSubmit);
