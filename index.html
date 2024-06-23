@@ -19,19 +19,16 @@
        welcome message to page?
        serach box and button
        theme toggle (dark/light)-->
-        <form>
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city"
             required
-            class="search-form search-form-input"
+            class="search-form-input"
+            id="search-form-city"
           />
           <!-- JS notes: trim city name, min character limit -->
-          <input
-            type="submit"
-            value="Search"
-            class="search-form search-form-submit"
-          />
+          <input type="submit" value="Search" class="search-form-submit" />
         </form>
       </header>
       <main>
@@ -42,7 +39,7 @@
    if possible build in humdity and wind speed under each or a toggle for either -->
         <div class="weather-app-body">
           <div>
-            <h1 class="city-name">Melbourne</h1>
+            <h1 class="city-name" id="city">Melbourne</h1>
             <!--to update with form search entry-->
             <p class="weather-details">
               Saturday 19:25, clear skies
@@ -86,5 +83,6 @@
         >.
       </footer>
     </div>
+    <script src="src/script.js"></script>
   </body>
 </html>
