@@ -40,7 +40,7 @@
    if possible build in humdity and wind speed under each or a toggle for either -->
         <div class="weather-app-body">
           <div>
-            <h1 class="city-name" id="city">Melbourne</h1>
+            <h1 class="city-name" id="city"></h1>
             <!--to update with form search entry-->
             <p class="weather-details">
               Saturday 19:25, clear skies
@@ -52,14 +52,14 @@
           </div>
           <div class="weather-feels-container">
             <span class="weather-temp-container">
-              <div class="weather-icon">☁️</div>
-              <div class="weather-value">11</div>
+              <div class="weather-icon" id="weather-icon">☁️</div>
+              <div class="weather-value" id="weather-temp"></div>
               <div class="weather-unit">°C</div>
               <br />
             </span>
             <div>
               <span class="feels-like-container">
-                <div class="feels-value">Feels like: 8</div>
+                <div class="feels-value" id="feels-temp">Feels like: 8</div>
                 <div class="feels-unit">°C</div>
                 <br />
                 <!--api to update icon, temp and feels like temp (if feels like temp possible and within my skills!)-->
