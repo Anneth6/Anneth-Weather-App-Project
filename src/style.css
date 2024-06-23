@@ -26,26 +26,26 @@ header {
   border-bottom: 1px solid rgb(25, 118, 210, 0.2);
   padding: 0 0 25px 0;
 }
-.search-form {
-  font-size: 16px;
-  font-family: "Montserrat", sans-serif;
-  border: none;
-  max-width: 100%;
-}
 .search-form-input {
   background-color: rgb(33, 150, 243, 0.15);
+  border: none;
   border-radius: 5px;
   width: 80%;
   padding: 15px;
   color: #1976d2;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
 .search-form-submit {
   background-color: rgba(33, 150, 243, 0.8);
   color: white;
   padding: 15px 20px;
   margin: 5px;
+  border: none;
   border-radius: 10px;
   font-weight: 500;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
 main {
   padding: 25px 5px;
