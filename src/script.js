@@ -1,17 +1,57 @@
 // sources weather details from axios api, via search Input
 function refreshWeather(response) {
+  let citySearch = document.querySelector("#city");
+  //   console.log(response.data.temperature.current);
   let temperature = document.querySelector("#weather-temp");
   let temp = response.data.temperature.current;
-  let citySearch = document.querySelector("#city");
+  //   console.log(response.data.condition.description);
+  let description = document.querySelector("#weather-description");
+  //   console.log(response.data.temperature.feels_like);
+  let feels = document.querySelector("#feels-temp");
+  let tempFeels = response.data.temperature.feels_like;
+  //   console.log(response.data.temperature.humidity);
+  let humidity = document.querySelector("#current-humidity");
+  //   console.log(response.data.wind.speed);
+  let wind = document.querySelector("#current-wind");
+
+  //date&time element
+  let time = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
 
   citySearch.innerHTML = response.data.city;
-  temperature.innerHTML = Math.round(temp);
 
-  //   console.log(response.data.temperature.current);
-  //   console.log(response.data.temperature.feels_like);
-  //   console.log(response.data.condition.description);
-  //   console.log(response.data.temperature.humidity);
-  //   console.log(response.data.wind.speed);
+  time.innerHTML = formatDate(date);
+
+  temperature.innerHTML = Math.round(temp);
+  description.innerHTML = response.data.condition.description;
+  feels.innerHTML = Math.round(tempFeels);
+  humidity.innerHTML = `${response.data.temperature.humidity}%`;
+  wind.innerHTML = `${response.data.wind.speed}km/h`;
+}
+
+//date, day time function and format
+function formatDate(date) {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
 
 // sets api search funtion, sourcing city from searchInput

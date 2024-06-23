@@ -43,10 +43,11 @@
             <h1 class="city-name" id="city"></h1>
             <!--to update with form search entry-->
             <p class="weather-details">
-              Saturday 19:25, clear skies
+              <span id="time"></span>, <span id="weather-description"></span>
               <br />
-              Humidity: <span class="variable-details">70%</span>, Wind:
-              <span class="variable-details">11km/h</span>
+              Humidity:
+              <span class="variable-details" id="current-humidity"></span>,
+              Wind: <span class="variable-details" id="current-wind"></span>
               <!--api to update weather description, humidity and wind speed-->
             </p>
           </div>
@@ -57,13 +58,17 @@
               <div class="weather-unit">°C</div>
               <br />
             </span>
-            <div>
-              <span class="feels-like-container">
-                <div class="feels-value" id="feels-temp">Feels like: 8</div>
-                <div class="feels-unit">°C</div>
+            <div class="feels-like-container">
+              <p>
+                Feels like:
+                <span
+                  class="feels-value variable-details"
+                  id="feels-temp"
+                ></span>
+                <span class="feels-unit">°C</span>
                 <br />
-                <!--api to update icon, temp and feels like temp (if feels like temp possible and within my skills!)-->
-              </span>
+              </p>
+              <!--api to update icon, temp and feels like temp (if feels like temp possible and within my skills!)-->
             </div>
           </div>
           <!-- <div>forecast to come in future</div> -->
