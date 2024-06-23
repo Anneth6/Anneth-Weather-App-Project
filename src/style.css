@@ -67,16 +67,17 @@ main {
   line-height: 30px;
 }
 .variable-details {
-  color: #1976d2;
+  color: rgb(25, 118, 210);
   font-weight: 500;
 }
 .weather-temp-container {
   display: flex;
 }
 .weather-icon {
-  font-size: 48px;
-  margin-top: 20px;
+  width: 100px;
+  height: 100px;
   margin-left: 7.5px;
+  filter: drop-shadow(5px 5px 10px rgba(6, 77, 136, 0.35));
 }
 .weather-value {
   font-size: 88px;
@@ -101,6 +102,8 @@ main {
 .feels-unit {
   vertical-align: super;
   font-size: 11px;
+  padding-right: 0;
+  justify-content: start;
 }
 
 footer {

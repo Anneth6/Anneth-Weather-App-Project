@@ -18,10 +18,15 @@ function refreshWeather(response) {
   let time = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
 
+  //icon
+  let icon = document.querySelector("#weather-icon");
+
+  //city, date and time, icon
   citySearch.innerHTML = response.data.city;
-
   time.innerHTML = formatDate(date);
+  icon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`; //injecting the HTML via JS to get and load the image file
 
+  //temperature variables
   temperature.innerHTML = Math.round(temp);
   description.innerHTML = response.data.condition.description;
   feels.innerHTML = Math.round(tempFeels);
